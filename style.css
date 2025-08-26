@@ -88,11 +88,11 @@ h2 {
     width: 30px;
     height: 30px;
     font-size: 1.2em;
-    display: inline-flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    padding: 0; /* Reset padding */
-    flex-shrink: 0; /* Prevent button from shrinking */
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    flex-shrink: 0; 
 }
 
 .reroll-btn:hover {
@@ -101,7 +101,7 @@ h2 {
 }
 
 a {
-    color: #66cc66; /* Softer green link */
+    color: #66cc66; 
     text-decoration: none;
 }
 
