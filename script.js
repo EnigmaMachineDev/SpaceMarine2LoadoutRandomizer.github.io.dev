@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const secondaryEl = document.getElementById('secondary');
     const meleeEl = document.getElementById('melee');
     const missionEl = document.getElementById('mission');
+    const enableDlcEl = document.getElementById('enable-dlc');
 
     const rerollChapterBtn = document.getElementById('reroll-chapter');
     const rerollClassBtn = document.getElementById('reroll-class');
@@ -33,8 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function rollChapter() {
-        const allChapters = [...data.chapters.vanilla, ...data.chapters.DLC];
-        const chapter = getRandomItem(allChapters);
+        let chapters = data.chapters.vanilla;
+        if (enableDlcEl.checked) {
+            chapters = [...data.chapters.vanilla, ...data.chapters.DLC];
+        }
+        const chapter = getRandomItem(chapters);
         setItem(chapterEl, chapter);
     }
 
